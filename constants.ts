@@ -26,20 +26,20 @@ export const PROJECTS: Project[] = [
   // GenAI Projects
   {
     id: '1',
-    title: "AI Content Generator",
+    title: "RAG Q/A Chat Application",
     category: "GenAI",
     description: "A RAG-based content generation tool using Gemini API to draft marketing copy tailored to specific brand voices.",
     image: "/assets/projects/project-1.jpg",
-    githubLink: "https://github.com",
-    liveLink: "https://example.com"
+    githubLink: "https://github.com/sarankumar74/RAG-Architecture-QA-Chats"
   },
   {
     id: '2',
-    title: "Code Assistant Bot",
+    title: "AI Voice to Voice Interview Application",
     category: "GenAI",
     description: "A VS Code extension powered by LLMs to suggest code refactoring and generate documentation automatically.",
     image: "/assets/projects/project-2.jpg",
-    githubLink: "https://github.com"
+    githubLink: "https://github.com/sarankumar74/AI-VoicetoVoice-Interview-Application",
+    liveLink: "https://ai-voicetovoice-interview-application-1.onrender.com"
   },
   {
     id: '3',
@@ -79,37 +79,38 @@ export const PROJECTS: Project[] = [
   // CNN Projects
   {
     id: '7',
-    title: "Plant Disease Detection",
+    title: "Tea Leaf Plant Disease Detection",
     category: "CNN",
     description: "A Convolutional Neural Network model trained to classify plant diseases from leaf images with 98% accuracy.",
     image: "/assets/projects/project-7.jpg",
-    githubLink: "https://github.com"
+    githubLink: "https://github.com/sarankumar74/Tea-Leaf-Disease-Classifier"
   },
   {
     id: '8',
-    title: "Traffic Sign Recognition",
+    title: "Covid 19 Detection from Chest X-ray Images",
     category: "CNN",
     description: "Real-time traffic sign recognition system for autonomous vehicle simulation using YOLO architecture.",
     image: "/assets/projects/project-8.jpg",
-    githubLink: "https://github.com",
-    liveLink: "https://example.com"
+    githubLink: "https://github.com/sarankumar74/Multi-class-COVID-19-Detection-from-Chest-X-ray-Images"
   },
   // Data Science Projects
   {
     id: '9',
-    title: "Customer Churn Prediction",
+    title: "EMI Prediction and Eligiblity App",
     category: "Data Science",
     description: "Analyzed telecom datasets to predict customer churn using Random Forest and XGBoost classifiers.",
     image: "/assets/projects/project-9.jpg",
-    githubLink: "https://github.com"
+    githubLink: "https://github.com/sarankumar74/EMI-Prediction-AI-Platform",
+    liveLink: "https://emi-eligiblity-amount-ai-prediction.streamlit.app/"
   },
   {
     id: '10',
-    title: "Housing Price Analysis",
+    title: "Bank Term Deposit Subscriotion Prediction",
     category: "Data Science",
     description: "Exploratory Data Analysis (EDA) and regression modeling to predict housing prices in major metropolitan areas.",
     image: "/assets/projects/project-10.jpg",
-    githubLink: "https://github.com"
+    githubLink: "https://github.com/sarankumar74/Bank-Term-Deposit-Subscription-Prediction",
+    liveLink: "https://bank-term-deposit-subscription-wnv1.onrender.com/"
   }
 ];
 
@@ -125,7 +126,7 @@ export const EDUCATION: EducationItem[] = [
     id: '2',
     institution: "Sree Vidhya Vihash Martic High School",
     degree: "Higher Secondary School",
-    stream: "Maths-Commputer",
-    years: "2020 - 2021"
+    stream: "Maths-Computer",
+    years: "2020 - 2022"
   }
 ];
