@@ -20,11 +20,11 @@ const About: React.FC = () => {
             </p>
             <div className="grid grid-cols-2 gap-6 mt-8">
                <div className="p-4 border border-slate-100 dark:border-slate-800 rounded-xl bg-slate-50/50 dark:bg-slate-800/50">
-                 <h3 className="font-bold text-2xl text-indigo-600 dark:text-indigo-400 mb-1">5+</h3>
+                 <h3 className="font-bold text-2xl text-indigo-600 dark:text-indigo-400 mb-1">2</h3>
                  <p className="text-slate-600 dark:text-slate-400 text-sm">GenAI Projects</p>
                </div>
                <div className="p-4 border border-slate-100 dark:border-slate-800 rounded-xl bg-slate-50/50 dark:bg-slate-800/50">
-                 <h3 className="font-bold text-2xl text-indigo-600 dark:text-indigo-400 mb-1">3+</h3>
+                 <h3 className="font-bold text-2xl text-indigo-600 dark:text-indigo-400 mb-1">0</h3>
                  <p className="text-slate-600 dark:text-slate-400 text-sm">Years Coding</p>
                </div>
             </div>
