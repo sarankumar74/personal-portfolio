@@ -32,7 +32,7 @@ export const PROJECTS: Project[] = [
     description: "A RAG-based content generation tool using Gemini API to draft marketing copy tailored to specific brand voices.",
     image: "/assets/projects/project-1.jpg",
     video: "/assets/projects/project-1.mp4",
-     githubLink: "https://github.com/sarankumar74/AI-VoicetoVoice-Interview-Application",
+    githubLink: "https://github.com/sarankumar74/AI-VoicetoVoice-Interview-Application",
     liveLink: "https://ai-voicetovoice-interview-application-1.onrender.com"
   },
   {
