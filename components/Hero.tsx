@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Download, Github, Linkedin, MapPin, Phone, Mail } from 'lucide-react';
 import { PERSONAL_DETAILS } from '../constants';
@@ -6,7 +7,7 @@ const Hero: React.FC = () => {
   return (
     <section 
       id="home" 
-      className="min-h-screen flex items-center justify-center pt-24 pb-16 md:pt-20 md:pb-64 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-50 to-indigo-50/30 dark:from-slate-950 dark:to-slate-900 transition-colors duration-300 scroll-mt-20"
+      className="min-h-screen flex items-center md:items-start justify-center pt-28 pb-16 md:pt-28 md:pb-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-50 to-indigo-50/30 dark:from-slate-950 dark:to-slate-900 transition-colors duration-300 scroll-mt-20"
     >
       <div className="max-w-7xl mx-auto w-full grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         
@@ -36,15 +37,13 @@ const Hero: React.FC = () => {
 
           <div className="flex flex-col md:flex-row flex-wrap items-center md:items-start gap-4 text-slate-600 dark:text-slate-400 text-sm md:text-base animate-fade-in-up delay-300">
              <div className="flex items-center gap-2">
-               <Phone size={20} className="text-indigo-500 dark:text-indigo-400" />
-               <span>{PERSONAL_DETAILS.phone}</span>
-             </div>
-             
-             <div className="flex items-center gap-2">
                <Mail size={20} className="text-indigo-500 dark:text-indigo-400" />
                <span>{PERSONAL_DETAILS.email}</span>
              </div>
-             
+             <div className="flex items-center gap-2">
+               <Phone size={20} className="text-indigo-500 dark:text-indigo-400" />
+               <span>{PERSONAL_DETAILS.phone}</span>
+             </div>
              <div className="flex items-center gap-2">
                <MapPin size={20} className="text-indigo-500 dark:text-indigo-400" />
                <span>{PERSONAL_DETAILS.location}</span>

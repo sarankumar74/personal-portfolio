@@ -1,9 +1,11 @@
+
 export interface Project {
   id: string;
   title: string;
   category: 'GenAI' | 'Mini' | 'CNN' | 'Data Science';
   description: string;
   image: string;
+  video?: string;
   githubLink: string;
   liveLink?: string;
 }

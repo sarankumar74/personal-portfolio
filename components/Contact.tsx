@@ -1,5 +1,6 @@
+
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Send } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, Copy, Check, MessageCircle } from 'lucide-react';
 import { PERSONAL_DETAILS } from '../constants';
 
 const Contact: React.FC = () => {
@@ -7,20 +8,51 @@ const Contact: React.FC = () => {
     name: '',
     email: '',
     phone: '',
+    subject: '',
     message: ''
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    alert('Thank you for your message! (This is a demo form)');
-    setFormData({ name: '', email: '', phone: '', message: '' });
-  };
+  const [emailCopied, setEmailCopied] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData(prev => ({
       ...prev,
       [e.target.name]: e.target.value
     }));
+  };
+
+  const handleCopyEmail = () => {
+    navigator.clipboard.writeText(PERSONAL_DETAILS.email);
+    setEmailCopied(true);
+    setTimeout(() => setEmailCopied(false), 2000);
+  };
+
+  const handleSendEmail = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!formData.name || !formData.message || !formData.subject) {
+      alert('Please fill in your Name, Subject, and Message.');
+      return;
+    }
+
+    const subject = encodeURIComponent(`${formData.subject} (from ${formData.name})`);
+    const body = `Name: ${formData.name}%0D%0AEmail: ${formData.email}%0D%0AContact: ${formData.phone}%0D%0A%0D%0AMessage:%0D%0A${formData.message}`;
+    
+    window.location.href = `mailto:${PERSONAL_DETAILS.email}?subject=${subject}&body=${body}`;
+  };
+
+  const handleSendWhatsApp = (e: React.MouseEvent) => {
+    e.preventDefault();
+    if (!formData.name || !formData.message) {
+      alert('Please fill in at least your Name and Message.');
+      return;
+    }
+
+    // Strip non-numeric characters from the owner's phone number for the API
+    const ownerPhone = PERSONAL_DETAILS.phone.replace(/[^\d]/g, '');
+    
+    const text = `*New Portfolio Inquiry*%0A%0A*Name:* ${formData.name}%0A*Email:* ${formData.email}%0A*Contact:* ${formData.phone}%0A*Subject:* ${formData.subject}%0A%0A*Message:*%0A${formData.message}`;
+    
+    window.open(`https://wa.me/${ownerPhone}?text=${text}`, '_blank');
   };
 
   return (
@@ -35,7 +67,7 @@ const Contact: React.FC = () => {
           
           {/* Left: Contact Form */}
           <div className="bg-slate-50 dark:bg-slate-800 p-8 rounded-2xl border border-slate-100 dark:border-slate-700 shadow-sm">
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form className="space-y-6">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">Name</label>
                 <input
@@ -76,6 +108,20 @@ const Contact: React.FC = () => {
                   placeholder="Enter contact number"
                 />
               </div>
+
+              <div>
+                <label htmlFor="subject" className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">Subject</label>
+                <input
+                  type="text"
+                  id="subject"
+                  name="subject"
+                  required
+                  value={formData.subject}
+                  onChange={handleChange}
+                  className="w-full px-4 py-3 rounded-lg bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-600 text-slate-900 dark:text-white focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition-all placeholder:text-slate-400 dark:placeholder:text-slate-500"
+                  placeholder="Project Inquiry"
+                />
+              </div>
               
               <div>
                 <label htmlFor="message" className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">Message</label>
@@ -90,13 +136,25 @@ const Contact: React.FC = () => {
                   placeholder="How can I help you?"
                 />
               </div>
-              <button
-                type="submit"
-                className="w-full flex items-center justify-center gap-2 bg-indigo-600 text-white px-6 py-4 rounded-lg font-semibold hover:bg-indigo-700 dark:hover:bg-indigo-500 transition-all hover:scale-[1.02]"
-              >
-                <Send size={20} />
-                Send Message
-              </button>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+                <button
+                  type="button"
+                  onClick={handleSendEmail}
+                  className="w-full flex items-center justify-center gap-2 bg-indigo-600 text-white px-6 py-4 rounded-lg font-semibold hover:bg-indigo-700 dark:hover:bg-indigo-500 transition-all hover:scale-[1.02] shadow-sm"
+                >
+                  <Send size={20} />
+                  Send via Email
+                </button>
+                <button
+                  type="button"
+                  onClick={handleSendWhatsApp}
+                  className="w-full flex items-center justify-center gap-2 bg-green-600 text-white px-6 py-4 rounded-lg font-semibold hover:bg-green-700 transition-all hover:scale-[1.02] shadow-sm"
+                >
+                  <MessageCircle size={20} />
+                  WhatsApp
+                </button>
+              </div>
             </form>
           </div>
 
@@ -104,14 +162,31 @@ const Contact: React.FC = () => {
           <div className="space-y-8 flex flex-col">
             {/* Info Cards */}
             <div className="grid grid-cols-1 gap-4">
-               <div className="p-6 bg-indigo-50 dark:bg-indigo-900/20 rounded-xl flex items-center gap-4 border border-transparent dark:border-indigo-500/20 hover:bg-indigo-100 dark:hover:bg-indigo-900/30 transition-colors">
-                 <div className="p-3 bg-white dark:bg-slate-800 rounded-full text-indigo-600 dark:text-indigo-400 shadow-sm shrink-0">
-                   <Mail size={24} />
+               {/* Email Card */}
+               <div className="p-6 bg-indigo-50 dark:bg-indigo-900/20 rounded-xl flex items-center justify-between gap-4 border border-transparent dark:border-indigo-500/20 hover:bg-indigo-100 dark:hover:bg-indigo-900/30 transition-colors group">
+                 <div className="flex items-center gap-4 overflow-hidden">
+                   <div className="p-3 bg-white dark:bg-slate-800 rounded-full text-indigo-600 dark:text-indigo-400 shadow-sm shrink-0">
+                     <Mail size={24} />
+                   </div>
+                   <div className="overflow-hidden">
+                     <p className="text-sm text-slate-500 dark:text-slate-400 font-medium">Email</p>
+                     <a 
+                       href={`mailto:${PERSONAL_DETAILS.email}`}
+                       className="text-slate-900 dark:text-white font-semibold truncate hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors block"
+                     >
+                       {PERSONAL_DETAILS.email}
+                     </a>
+                   </div>
                  </div>
-                 <div className="overflow-hidden">
-                   <p className="text-sm text-slate-500 dark:text-slate-400 font-medium">Email</p>
-                   <p className="text-slate-900 dark:text-white font-semibold truncate">{PERSONAL_DETAILS.email}</p>
-                 </div>
+                 
+                 <button 
+                   onClick={handleCopyEmail}
+                   className="p-2 text-slate-500 hover:text-indigo-600 dark:text-slate-400 dark:hover:text-indigo-400 bg-white dark:bg-slate-800 rounded-full shadow-sm opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-all focus:opacity-100"
+                   title="Copy Email Address"
+                   aria-label="Copy Email Address"
+                 >
+                   {emailCopied ? <Check size={18} className="text-green-500" /> : <Copy size={18} />}
+                 </button>
                </div>
                
                <div className="p-6 bg-indigo-50 dark:bg-indigo-900/20 rounded-xl flex items-center gap-4 border border-transparent dark:border-indigo-500/20 hover:bg-indigo-100 dark:hover:bg-indigo-900/30 transition-colors">
