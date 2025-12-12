@@ -22,106 +22,131 @@ export const SKILLS: Skill[] = [
   { name: "RAG", percentage: 80 },
   { name: "Generative AI", percentage: 85 },
 ];
-
 export const PROJECTS: Project[] = [
   // GenAI Projects
-   {
+  {
     id: '1',
     title: "RAG Q/A Chat Application",
     category: "GenAI",
-    description: "A RAG-based content generation tool using Gemini API to draft marketing copy tailored to specific brand voices.",
+    description: "A RAG-based QA system leveraging Gemini API to retrieve context and answer user queries with high accuracy.",
     image: "/assets/projects/project-1.jpg",
     video: "/assets/projects/project-1.mp4",
-    githubLink: "https://github.com/sarankumar74/AI-VoicetoVoice-Interview-Application",
-    liveLink: "https://ai-voicetovoice-interview-application-1.onrender.com"
+    githubLink: "https://github.com",
+    liveLink: "https://example.com"
   },
   {
     id: '2',
-    title: "Code Assistant Bot",
+    title: "AI Voice to Voice Interview Bot",
     category: "GenAI",
-    description: "A VS Code extension powered by LLMs to suggest code refactoring and generate documentation automatically.",
+    description: "An interactive voice bot powered by LLMs to conduct mock interviews and provide real-time feedback.",
     image: "/assets/projects/project-2.jpg",
     video: "/assets/projects/project-2.mp4",
     githubLink: "https://github.com"
   },
   {
     id: '3',
-    title: "Personalized Tutor",
+    title: "AI Powered Text to SQL Chat",
     category: "GenAI",
-    description: "An adaptive learning platform that uses GenAI to create personalized quizzes and study plans for students.",
+    description: "A natural language interface that translates user questions into executable SQL queries for seamless database access.",
     image: "/assets/projects/project-3.jpg",
     video: "/assets/projects/project-3.mp4",
     githubLink: "https://github.com",
     liveLink: "https://example.com"
   },
-  // Mini Projects
   {
-    id: '4',
-    title: "Task Manager CLI",
-    category: "Mini",
-    description: "A lightweight command-line interface for managing daily tasks with local storage persistence.",
+    id: 'genai-4',
+    title: "Gemma Based Blog Generator",
+    category: "GenAI",
+    description: "A specialized blog generation tool using Google's Gemma models to create structured and engaging content.",
     image: "/assets/projects/project-4.jpg",
     video: "/assets/projects/project-4.mp4",
     githubLink: "https://github.com"
   },
+  // Machine Learning Projects
   {
     id: '5',
-    title: "Weather Dashboard",
-    category: "Mini",
-    description: "A simple React app fetching real-time weather data using OpenWeatherMap API.",
+    title: "EMI Prediction",
+    category: "Machine Learning",
+    description: "A machine learning model designed to estimate loan Equated Monthly Installments (EMI) and assess repayment capability based on financial profiles.",
     image: "/assets/projects/project-5.jpg",
     video: "/assets/projects/project-5.mp4",
+    githubLink: "https://github.com"
+  },
+  {
+    id: '6',
+    title: "Bank Term Subscription Prediction",
+    category: "Machine Learning",
+    description: "A classification system used to predict whether a bank client will subscribe to a term deposit, optimizing marketing campaigns.",
+    image: "/assets/projects/project-6.jpg",
+    video: "/assets/projects/project-6.mp4",
     githubLink: "https://github.com",
     liveLink: "https://example.com"
   },
   {
-    id: '6',
-    title: "Expense Tracker",
-    category: "Mini",
-    description: "A visual expense tracker using Chart.js to visualize monthly spending habits.",
-    image: "/assets/projects/project-6.jpg",
-    video: "/assets/projects/project-6.mp4",
-    githubLink: "https://github.com"
-  },
-  // CNN Projects
-   {
     id: '7',
-    title: "Tea Leaf Plant Disease Detection",
-    category: "CNN",
-    description: "A Convolutional Neural Network model trained to classify plant diseases from leaf images with 98% accuracy.",
+    title: "Breast Cancer Prediction",
+    category: "Machine Learning",
+    description: "A healthcare diagnostic tool employing machine learning algorithms to classify breast tumors as malignant or benign with high precision.",
     image: "/assets/projects/project-7.jpg",
     video: "/assets/projects/project-7.mp4",
-    githubLink: "https://github.com/sarankumar74/Tea-Leaf-Disease-Classifier"
+    githubLink: "https://github.com"
   },
   {
     id: '8',
-    title: "Covid 19 Detection from Chest X-ray Images",
-    category: "CNN",
-    description: "Real-time traffic sign recognition system for autonomous vehicle simulation using YOLO architecture.",
+    title: "PatrollQ-Smart Safety Analytics Platform",
+    category: "Machine Learning",
+    description: "An intelligent safety monitoring platform using predictive analytics to identify potential workplace hazards and enhance safety compliance.",
     image: "/assets/projects/project-8.jpg",
     video: "/assets/projects/project-8.mp4",
-    githubLink: "https://github.com/sarankumar74/Multi-class-COVID-19-Detection-from-Chest-X-ray-Images"
+    githubLink: "https://github.com"
   },
-  // Data Science Projects
-  {  
+  // Deep Learning Projects
+  {
     id: '9',
-    title: "EMI Prediction and Eligiblity App",
-    category: "Data Science",
-    description: "Analyzed telecom datasets to predict customer churn using Random Forest and XGBoost classifiers.",
+    title: "Tea Leaf Diseases Classification",
+    category: "Deep Learning",
+    description: "A deep learning application utilizing advanced CNN architectures to classify tea leaf diseases from images to aid precision agriculture.",
     image: "/assets/projects/project-9.jpg",
     video: "/assets/projects/project-9.mp4",
-    githubLink: "https://github.com/sarankumar74/EMI-Prediction-AI-Platform",
-    liveLink: "https://emi-eligiblity-amount-ai-prediction.streamlit.app/"
+    githubLink: "https://github.com"
   },
   {
     id: '10',
-    title: "Bank Term Deposit Subscriotion Prediction",
-    category: "Data Science",
-    description: "Exploratory Data Analysis (EDA) and regression modeling to predict housing prices in major metropolitan areas.",
+    title: "Covid 19 X-Ray Classification",
+    category: "Deep Learning",
+    description: "Medical diagnostic tool using deep learning to classify Chest X-Rays for COVID-19 detection with high sensitivity.",
     image: "/assets/projects/project-10.jpg",
     video: "/assets/projects/project-10.mp4",
-    githubLink: "https://github.com/sarankumar74/Bank-Term-Deposit-Subscription-Prediction",
-    liveLink: "https://bank-term-deposit-subscription-wnv1.onrender.com/"
+    githubLink: "https://github.com",
+    liveLink: "https://example.com"
+  },
+  {
+    id: '11',
+    title: "Smart Vision in Computer Vision",
+    category: "Deep Learning",
+    description: "An advanced computer vision system capable of real-time object tracking, scene understanding, and anomaly detection.",
+    image: "/assets/projects/project-11.jpg",
+    video: "/assets/projects/project-11.mp4",
+    githubLink: "https://github.com"
+  },
+  // Data Science Projects
+  {
+    id: '12',
+    title: "Customer Churn Prediction",
+    category: "Data Science",
+    description: "Analyzed telecom datasets to predict customer churn using Random Forest and XGBoost classifiers.",
+    image: "/assets/projects/project-12.jpg",
+    video: "/assets/projects/project-12.mp4",
+    githubLink: "https://github.com"
+  },
+  {
+    id: '13',
+    title: "Housing Price Analysis",
+    category: "Data Science",
+    description: "Exploratory Data Analysis (EDA) and regression modeling to predict housing prices in major metropolitan areas.",
+    image: "/assets/projects/project-13.jpg",
+    video: "/assets/projects/project-13.mp4",
+    githubLink: "https://github.com"
   }
 ];
 
