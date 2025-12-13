@@ -50,7 +50,7 @@ const Contact: React.FC = () => {
     // Strip non-numeric characters from the owner's phone number for the API
     const ownerPhone = PERSONAL_DETAILS.phone.replace(/[^\d]/g, '');
     
-    const text = `*New Portfolio Inquiry*%0A%0A*Name:* ${formData.name}%0A*Email:* ${formData.email}%0A*Contact:* ${formData.phone}%0A*Subject:* ${formData.subject}%0A%0A*Message:*%0A${formData.message}`;
+    const text = `*Portfolio Inquiry*%0A%0A*Name:* ${formData.name}%0A*Email:* ${formData.email}%0A*Contact:* ${formData.phone}%0A*Subject:* ${formData.subject}%0A%0A*Message:*%0A${formData.message}`;
     
     window.open(`https://wa.me/${ownerPhone}?text=${text}`, '_blank');
   };
