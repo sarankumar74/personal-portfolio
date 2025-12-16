@@ -67,7 +67,7 @@ export const PROJECTS: Project[] = [
     category: "Machine Learning",
     description: "A machine learning model designed to estimate loan Equated Monthly Installments (EMI) and assess repayment capability based on financial profiles.",
     image: "/assets/projects/project-5.png",
-    video: "/assets/projects/project-5.mp4",
+    video: "https://drive.google.com/file/d/1K1SpvIiLhIaAUhMpwu4a1DGOyO3KxxlU/preview",
     githubLink: "https://github.com/sarankumar74/EMI-Prediction-AI-Platform"
   },
   {
@@ -76,7 +76,7 @@ export const PROJECTS: Project[] = [
     category: "Machine Learning",
     description: "A classification system used to predict whether a bank client will subscribe to a term deposit, optimizing marketing campaigns.",
     image: "/assets/projects/project-6.png",
-    video: "/assets/projects/project-6.mp4",
+    video: "https://drive.google.com/file/d/1u8oHUi0FT3askWQCPbqA-_drFI21aztj/preview",
     githubLink: "https://github.com/sarankumar74/Bank-Term-Deposit-Subscription-Prediction"
   },
   {
@@ -85,7 +85,7 @@ export const PROJECTS: Project[] = [
     category: "Machine Learning",
     description: "An intelligent safety monitoring platform using predictive analytics to identify potential workplace hazards and enhance safety compliance.",
     image: "/assets/projects/project-7.png",
-    video: "/assets/projects/project-7.mp4",
+    video: "https://drive.google.com/file/d/1JlF-qufNFmbvYYguTsYyit9E4zhg5VJl/preview",
     githubLink: "https://github.com/sarankumar74/PatrollQ-Smart-Safety-Analytics-Platform"
   },
   // Deep Learning Projects
@@ -95,7 +95,7 @@ export const PROJECTS: Project[] = [
     category: "Deep Learning",
     description: "A deep learning application utilizing advanced CNN architectures to classify tea leaf diseases from images to aid precision agriculture.",
     image: "/assets/projects/project-8.png",
-    video: "/assets/projects/project-8.mp4",
+    video: "https://drive.google.com/file/d/1Z1CUAy5yXJBEIFEtsKcqkb2h24eTRJ_u/preview",
     githubLink: "https://github.com/sarankumar74/Tea-Leaf-Disease-Classifier"
   },
   {
@@ -104,8 +104,8 @@ export const PROJECTS: Project[] = [
     category: "Deep Learning",
     description: "Medical diagnostic tool using deep learning to classify Chest X-Rays for COVID-19 detection with high sensitivity.",
     image: "/assets/projects/project-9.png",
-    video: "/assets/projects/project-9.mp4",
-    githubLink: "https://github.com/sarankumar74/Tea-Leaf-Disease-Classifier"
+    video: "https://drive.google.com/file/d/1n2JQMK0ifvutcaEKbxOJxaVCB-dKJASJ/preview",
+    githubLink: "https://github.com/sarankumar74/Multi-class-COVID-19-Detection-from-Chest-X-ray-Images"
   },
   {
     id: '10',
@@ -113,7 +113,7 @@ export const PROJECTS: Project[] = [
     category: "Deep Learning",
     description: "An advanced computer vision system capable of real-time object tracking, scene understanding, and anomaly detection.",
     image: "/assets/projects/project-10.png",
-    video: "/assets/projects/project-10.mp4",
+    video: "https://drive.google.com/file/d/1ckllZND7PxnjJh4-4DI5E1WxAG_L4CZA/preview",
     githubLink: "https://github.com/sarankumar74/SmartVision-AI"
   },
   
