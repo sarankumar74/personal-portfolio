@@ -27,7 +27,7 @@ export const PROJECTS: Project[] = [
   {
     id: '1',
     title: "RAG Q/A Chat Application",
-    category: "GenAI",
+    category: "Generative AI",
     description: "A RAG-based QA system leveraging Gemini API to retrieve context and answer user queries with high accuracy.",
     image: "/assets/projects/project-1.png",
     video: "https://drive.google.com/file/d/18IxpYLDqDw8o0D9U1RdP7PF_0IDS5naA/preview",
@@ -36,7 +36,7 @@ export const PROJECTS: Project[] = [
   {
     id: '2',
     title: "AI Voice to Voice Interview Bot",
-    category: "GenAI",
+    category: "Generative AI",
     description: "An interactive voice bot powered by LLMs to conduct mock interviews and provide real-time feedback.",
     image: "/assets/projects/project-2.png",
     video: "https://drive.google.com/file/d/1O4RpEX57NlSxggxToKE7SwdyFPiZW9Bf/preview",
@@ -45,7 +45,7 @@ export const PROJECTS: Project[] = [
   {
     id: '3',
     title: "AI Powered Text to SQL Chat",
-    category: "GenAI",
+    category: "Generative AI",
     description: "A natural language interface that translates user questions into executable SQL queries for seamless database access.",
     image: "/assets/projects/project-3.png",
     video: "https://drive.google.com/file/d/1d3raW0MrKm9-v0lYlSDJjr00fW9j3oAd/preview",
@@ -54,7 +54,7 @@ export const PROJECTS: Project[] = [
   {
     id: '4',
     title: "Gemma Based Blog Generator",
-    category: "GenAI",
+    category: "Generative AI",
     description: "A specialized blog generation tool using Google's Gemma models to create structured and engaging content.",
     image: "/assets/projects/project-4.png",
     video: "https://drive.google.com/file/d/1a05lXT4NP5ODo0hRLOQbgqUXzvRpft5X/preview",

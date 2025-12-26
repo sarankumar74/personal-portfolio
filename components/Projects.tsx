@@ -3,7 +3,7 @@ import { ExternalLink, Github, Play, X } from 'lucide-react';
 import { PROJECTS } from '../constants';
 import { Project } from '../types';
 
-const CATEGORIES = ['All', 'GenAI', 'Machine Learning', 'Deep Learning'];
+const CATEGORIES = ['All', 'Generative AI', 'Machine Learning', 'Deep Learning'];
 
 const Projects: React.FC = () => {
   const [activeFilter, setActiveFilter] = useState('All');
