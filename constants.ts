@@ -18,7 +18,7 @@ export const SKILLS: Skill[] = [
   { name: "Data Science", percentage: 90 },
   { name: "Machine Learning", percentage: 92 },
   { name: "Deep Learning", percentage: 88 },
-  { name: "CNN", percentage: 85 },
+  { name: "Computer Vision", percentage: 70 },
   { name: "RAG", percentage: 80 },
   { name: "Generative AI", percentage: 85 },
 ];
